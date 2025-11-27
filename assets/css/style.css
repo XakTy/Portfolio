@@ -1897,6 +1897,28 @@ textarea.form-input::-webkit-resizer { display: none; }
   z-index: 1005;
 }
 
+@media (max-width: 600px) {
+  .portfolio-modal {
+    width: 95%;
+    max-height: 85vh;
+    padding: 15px;
+  }
+
+  .portfolio-media img,
+  .portfolio-media iframe {
+    max-width: 100%;
+    max-height: 40vh;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+  }
+}
+
 .portfolio-modal::-webkit-scrollbar {
   width: 6px;
 }
@@ -1937,14 +1959,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 12px;
 }
 
-.modal-content a {
-  color: var(--light-gray);
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-.modal-content a:hover {
-  color: var(--orange-yellow-crayola); /* золотистый цвет как в кнопках */
+.modal-content {
+  margin-top: 10px;
 }
 
 .modal-title {
