@@ -1,7 +1,6 @@
 'use strict';
 
 
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
@@ -32,6 +31,47 @@ const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
+
+
+const projectItems = document.querySelectorAll(".project-item");
+const portfolioModal = document.querySelector("[data-portfolio-modal]");
+const portfolioOverlay = document.querySelector("[data-portfolio-overlay]");
+const portfolioCloseBtn = document.querySelector("[data-portfolio-close-btn]");
+
+const mediaContainer = document.querySelector("[data-portfolio-media]");
+const titleContainer = document.querySelector("[data-portfolio-title]");
+const descContainer = document.querySelector("[data-portfolio-description]");
+
+projectItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const title = item.dataset.projectTitle;
+    const desc = item.dataset.projectDescription;
+    const media = JSON.parse(item.dataset.projectMedia);
+
+    titleContainer.textContent = title;
+    descContainer.innerHTML = desc;
+
+    mediaContainer.innerHTML = "";
+    media.forEach(url => {
+      if (url.endsWith(".mp4")) {
+        mediaContainer.innerHTML += `<video src="${url}" controls></video>`;
+      } else {
+        mediaContainer.innerHTML += `<img src="${url}" />`;
+      }
+    });
+
+    portfolioModal.classList.add("active");
+  });
+});
+
+portfolioOverlay.addEventListener("click", () => {
+  portfolioModal.classList.remove("active");
+});
+
+portfolioCloseBtn.addEventListener("click", () => {
+  portfolioModal.classList.remove("active");
+});
+
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {

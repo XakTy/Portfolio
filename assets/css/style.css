@@ -1879,4 +1879,99 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+
+
+  /* ===== Portfolio Modal ===== */
+
+.portfolio-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 800px);
+  max-height: 90vh;
+  background: var(--eerie-black-1);
+  padding: 20px;
+  border-radius: 20px;
+  overflow-y: auto;
+  z-index: 1005;
+}
+
+.portfolio-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.portfolio-modal::-webkit-scrollbar-thumb {
+  background: var(--light-gray);
+  border-radius: 4px;
+}
+
+.modal-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+.portfolio-media {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* центрируем */
+  gap: 1rem;
+}
+
+/* Все медиа в модалке */
+.portfolio-media img,
+.portfolio-media iframe,
+.portfolio-media video {
+  display: block;
+  width: 100%;         /* занимают всю ширину модалки */
+  max-width: 150px;    /* но не больше — красиво */
+  max-height: 60vh;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+}
+
+.modal-content a {
+  color: var(--light-gray);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.modal-content a:hover {
+  color: var(--orange-yellow-crayola); /* золотистый цвет как в кнопках */
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.portfolio-modal p {
+  font-size: 16px;
+  color: var(--light-gray);
+  text-align: center;
+}
+
+[data-portfolio-modal] {
+  display: none;
+}
+
+[data-portfolio-modal].active {
+  display: block;
+}
+
+[data-portfolio-overlay] {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
 }

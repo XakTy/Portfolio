@@ -180,18 +180,9 @@
 
         <section class="about-text">
           <p>
-            As a passionate and results-driven Unity Developer, 
-            I possess a comprehensive background in creating captivating and performant games for the mobile market. 
-            My core expertise lies within the Casual sphere, where I focus on delivering polished, user-friendly experiences. 
-            Furthermore, I have successfully expanded my skill set to encompass the fast-paced world of Hyper-Casual and Hybrid-Casual projects, understanding the critical importance of rapid prototyping, strong core mechanics, and data-driven iteration.
+       Experienced Unity Developer specializing in the design and development of high-performance mobile games across Casual, Hyper-Casual, Hybrid, and Mid-Core genres. I leverage a data-oriented technology stack, primarily using the Entity Component System (ECS) architecture, to build scalable, efficient, and engaging gaming experiences with optimized performance for a wide audience.
           </p>
 
-          <p>
-            To ensure the highest level of performance and scalability in my projects, 
-            I primarily utilize a data-oriented design approach through the Unity Entity Component System (ECS). 
-            This allows me to craft complex and engaging gameplay, particularly beneficial for Mid-Core projects, while maintaining buttery-smooth frame rates and efficient resource management. 
-            I am constantly seeking to push the boundaries of mobile game development by combining creative gameplay design with robust technical architecture.
-          </p>
         </section>
 
 
@@ -374,22 +365,28 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="casual">
-              <a href="#">
+              <li class="project-item active" 
+                data-filter-item 
+                data-category="casual"
+                data-project-title="Purrfect Town: Cat Jam"
+                data-project-description="<b>Gameplay:</b><br><a href='https://youtu.be/EOLysvkcfz0' target='_blank'>Смотреть на YouTube</a><br><br><b>Editor:</b><br><a href='https://drive.google.com/file/d/1clR4LasLu1DWoJ1EY1YnSnZBOz4LRWEV/view?usp=sharing' target='_blank'>Скачать / Открыть в Google Drive</a><br><br><b>Features:</b><br>Purchase, More SDK Analytics, Localization, Leaderboard, More gamemode, Game Events, Roulette, LootBox, Progression"
 
+                data-project-media='[
+                  "./assets/images/project-1.png"
+              
+                ]'>
+
+              <a href="#">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-1.png" alt="finance" loading="lazy">
+                  <img src="./assets/images/project-1.png">
                 </figure>
-
                 <h3 class="project-title">Purrfect Town: Cat Jam</h3>
-
                 <p class="project-category">Casual</p>
-
               </a>
+
             </li>
 
             <li class="project-item  active" data-filter-item data-category="casual">
@@ -449,6 +446,32 @@
           </ul>
 
         </section>
+
+                    <!-- Portfolio modal -->
+        <div class="modal-container" data-portfolio-modal>
+
+          <div class="overlay" data-portfolio-overlay></div>
+
+          <section class="portfolio-modal">
+
+            <button class="modal-close-btn" data-portfolio-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <div class="portfolio-media" data-portfolio-media>
+                <!-- Сюда будет добавляться HTML с изображениями/видео -->
+              </div>
+            </div>
+
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-portfolio-title></h4>
+              <p data-portfolio-description></p>
+            </div>
+
+          </section>
+
+        </div>
 
       </article>
 
