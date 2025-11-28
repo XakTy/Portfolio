@@ -214,3 +214,53 @@ document.querySelectorAll('.navbar-link').forEach(link => {
 // Инициализация
 document.addEventListener('DOMContentLoaded', handleHashChange);
 window.addEventListener('hashchange', handleHashChange);
+
+
+// Функция для активации страницы по хэшу
+function activatePageFromHash() {
+    const hash = window.location.hash.replace('#', '') || 'about';
+    const pageName = hash.toLowerCase();
+    
+    // Деактивируем все
+    document.querySelectorAll('article').forEach(art => art.classList.remove('active'));
+    document.querySelectorAll('[data-nav-link]').forEach(link => link.classList.remove('active'));
+    
+    // Активируем нужную страницу
+    const targetArticle = document.querySelector(`[data-page="${pageName}"]`);
+    const targetNavLink = document.querySelector(`[data-nav-link="${pageName}"]`);
+    
+    if (targetArticle && targetNavLink) {
+        targetArticle.classList.add('active');
+        targetNavLink.classList.add('active');
+    } else {
+        // Если страница не найдена, активируем about
+        document.querySelector('[data-page="about"]').classList.add('active');
+        document.querySelector('[data-nav-link="about"]').classList.add('active');
+    }
+}
+
+// Функция для навигации
+function navigateTo(pageName) {
+    // Обновляем хэш
+    window.location.hash = pageName;
+    
+    // Активируем страницу
+    activatePageFromHash();
+}
+
+// Инициализация при загрузке
+document.addEventListener('DOMContentLoaded', function() {
+    // Активируем страницу по хэшу
+    activatePageFromHash();
+    
+    // Обработчики для кнопок навигации
+    document.querySelectorAll('[data-nav-link]').forEach(link => {
+        link.addEventListener('click', function() {
+            const pageName = this.getAttribute('data-nav-link');
+            navigateTo(pageName);
+        });
+    });
+});
+
+// Обработка изменения хэша
+window.addEventListener('hashchange', activatePageFromHash);
