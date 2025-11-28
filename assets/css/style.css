@@ -669,6 +669,7 @@ main {
   z-index: 2;
 }
 
+
 .modal-container.active .testimonials-modal {
   transform: scale(1);
   opacity: 1;
@@ -1367,50 +1368,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: calc(100% - 64px);
   }
 
-
-  /**
-   * #Portfolio
-   */
-    .portfolio-modal {
-    width: 98%;
-    padding: 12px;
-    margin: 5px;
-    border-radius: 14px;
-  }
-  
-  .portfolio-media {
-    gap: 0.5rem;
-  }
-  
-  .portfolio-media img,
-  .portfolio-media iframe,
-  .portfolio-media video {
-    max-height: 35vh;
-    border-radius: 10px;
-  }
-  
-  .modal-title {
-    font-size: 18px;
-    margin-bottom: 6px;
-  }
-  
-  .portfolio-modal p {
-    font-size: 13px;
-    line-height: 1.4;
-  }
-  
-  .modal-content {
-    margin-top: 8px;
-  }
-  
-  .modal-close-btn {
-    top: 8px;
-    right: 8px;
-    width: 24px;
-    height: 24px;
-    font-size: 14px;
-  }
-
   /**
    * #NAVBAR
    */
@@ -1493,6 +1450,17 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 30px;
     border-radius: 20px;
   }
+
+  .portfolio-modal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 25px;
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+
 
   .modal-img-wrapper {
     display: flex;
