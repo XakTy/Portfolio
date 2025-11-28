@@ -354,6 +354,16 @@ main {
   border-radius: 8px;
 }
 
+.project-category .title {
+  color: var(--white-1);
+  background: var(--onyx);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  width: max-content;
+  padding: 3px 12px;
+  border-radius: 8px;
+}
+
 .info_more-btn {
   position: absolute;
   top: -15px;
@@ -1046,6 +1056,16 @@ main {
   font-weight: var(--fw-300);
 }
 
+
+.project-category .title {
+  color: var(--white-1);
+  background: var(--onyx);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  width: max-content;
+  padding: 3px 12px;
+  border-radius: 8px;
+}
 
 
 
