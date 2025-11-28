@@ -1856,7 +1856,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+.modal-content a {
+  color: var(--light-gray);
+  font-weight: 500;
+  text-decoration: underline;
+}
 
+.modal-content a:hover {
+  color: var(--orange-yellow-crayola); /* золотистый цвет как в кнопках */
+}
 
 
 
@@ -2039,16 +2047,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .modal-content {
   margin-top: 10px;
-}
-
-.modal-content a {
-  color: var(--light-gray);
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-.modal-content a:hover {
-  color: var(--orange-yellow-crayola); /* золотистый цвет как в кнопках */
 }
 
 .modal-title {
